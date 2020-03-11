@@ -4,7 +4,6 @@ object Version {
 
 object AndroidSettings {
     const val compileSdk = 29
-    const val buildToolsVer = "29.0.3"
 
     const val minSdk = 29
     const val targetSdk = 29
@@ -39,4 +38,11 @@ object AndroidTestDep {
 
     const val junitExt = "androidx.test.ext:junit:$junitExtVer"
     const val espressoCore = "androidx.test.espresso:espresso-core:$espressoVer"
+}
+
+object ProjectGradle {
+    private const val gradleVer = "4.0.0-beta01"
+
+    const val gradle = "com.android.tools.build:gradle:$gradleVer"
+    const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.kotlin}"
 }
