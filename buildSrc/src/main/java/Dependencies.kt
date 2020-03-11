@@ -41,7 +41,7 @@ object AndroidTestDep {
 }
 
 object ProjectGradle {
-    private const val gradleVer = "4.0.0-beta01"
+    private const val gradleVer = "3.6.1"
 
     const val gradle = "com.android.tools.build:gradle:$gradleVer"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.kotlin}"
