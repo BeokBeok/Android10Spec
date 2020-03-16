@@ -1,15 +1,17 @@
 plugins {
-    id("common-android")
+    id("com.android.application")
+    id("kotlin-android")
+    id("kotlin-android-extensions")
 }
 
-android {
-    defaultConfig {
-        applicationId = "com.example.android10spec"
-        testInstrumentationRunner = AndroidSettings.testInstrumentationRunner
-    }
-}
+androidApplicationConfig("com.example.android10spec")
 
 dependencies {
+    BasicDep.run {
+        implementation(kotlin)
+        implementation(fileTree(fileTreeMap))
+    }
+
     UiDep.run {
         implementation(material)
         implementation(constraintLayout)
@@ -22,4 +24,3 @@ dependencies {
         androidTestImplementation(espressoCore)
     }
 }
-
