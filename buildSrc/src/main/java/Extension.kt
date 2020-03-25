@@ -1,20 +1,17 @@
 import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.internal.dsl.DefaultConfig
 import org.gradle.api.Project
+import org.gradle.api.artifacts.dsl.DependencyHandler
 import org.gradle.kotlin.dsl.DependencyHandlerScope
+import org.gradle.plugin.use.PluginDependenciesSpec
 
+val Project.android: BaseExtension
+    get() = extensions.findByName("android") as? BaseExtension
+        ?: error("Project $name is not an Android module")
 
-fun DependencyHandlerScope.gradleProject() {
-    "implementation"(ProjectGradle.gradle)
-    "implementation"(ProjectGradle.kotlinGradlePlugin)
-}
-
-fun DependencyHandlerScope.testDep() {
-    "testImplementation"(TestDep.junit)
-    AndroidTestDep.run {
-        "androidTestImplementation"(junitExt)
-        "androidTestImplementation"(espressoCore)
-    }
+fun PluginDependenciesSpec.androidDefault() {
+    id("kotlin-android")
+    id("kotlin-android-extensions")
 }
 
 fun Project.androidApplicationConfig(appId: String) {
@@ -47,6 +44,22 @@ fun Project.androidLibraryConfig(defaultConfigExtensions: (DefaultConfig.() -> U
     }
 }
 
-val Project.android: BaseExtension
-    get() = extensions.findByName("android") as? BaseExtension
-            ?: error("Project $name is not an Android module")
+fun DependencyHandlerScope.testDep() {
+    testImplementation(TestDep.junit)
+    AndroidTestDep.run {
+        androidTestImplementation(junitExt)
+        androidTestImplementation(espressoCore)
+    }
+}
+
+private fun DependencyHandler.implementation(depName: String) =
+    add("implementation", depName)
+
+private fun DependencyHandler.kapt(depName: String) =
+    add("kapt", depName)
+
+private fun DependencyHandler.testImplementation(depName: String) =
+    add("testImplementation", depName)
+
+private fun DependencyHandler.androidTestImplementation(depName: String) =
+    add("androidTestImplementation", depName)
