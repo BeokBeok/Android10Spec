@@ -9,6 +9,14 @@ fun DependencyHandlerScope.gradleProject() {
     "implementation"(ProjectGradle.kotlinGradlePlugin)
 }
 
+fun DependencyHandlerScope.testDep() {
+    "testImplementation"(TestDep.junit)
+    AndroidTestDep.run {
+        "androidTestImplementation"(junitExt)
+        "androidTestImplementation"(espressoCore)
+    }
+}
+
 fun Project.androidApplicationConfig(appId: String) {
     androidLibraryConfig {
         applicationId = appId

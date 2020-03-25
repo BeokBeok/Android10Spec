@@ -17,10 +17,5 @@ dependencies {
         implementation(constraintLayout)
     }
 
-    testImplementation(TestDep.junit)
-
-    AndroidTestDep.run {
-        androidTestImplementation(junitExt)
-        androidTestImplementation(espressoCore)
-    }
+    testDep()
 }

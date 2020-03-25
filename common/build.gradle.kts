@@ -6,10 +6,5 @@ plugins {
 androidLibraryConfig()
 
 dependencies {
-    testImplementation(TestDep.junit)
-
-    AndroidTestDep.run {
-        androidTestImplementation(junitExt)
-        androidTestImplementation(espressoCore)
-    }
+    testDep()
 }
