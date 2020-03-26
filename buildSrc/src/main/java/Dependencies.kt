@@ -13,12 +13,12 @@ object AndroidSettings {
     const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 }
 
-object BasicDep {
+object BasicComponent {
     val fileTreeMap = mapOf("dir" to "libs", "include" to listOf("*.jar"))
     const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Version.kotlin}"
 }
 
-object UiDep {
+object UiComponent {
     private const val materialVer = "1.1.0"
     private const val constraintLayoutVer = "1.1.3"
 
@@ -26,13 +26,13 @@ object UiDep {
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
 }
 
-object TestDep {
+object TestComponent {
     private const val junitVer = "4.12"
 
     const val junit = "junit:junit:$junitVer"
 }
 
-object AndroidTestDep {
+object AndroidTestComponent {
     private const val junitExtVer = "1.1.1"
     private const val espressoVer = "3.2.0"
 
@@ -40,7 +40,7 @@ object AndroidTestDep {
     const val espressoCore = "androidx.test.espresso:espresso-core:$espressoVer"
 }
 
-object ProjectGradle {
+object GradleComponent {
     private const val gradleVer = "3.6.1"
 
     const val gradle = "com.android.tools.build:gradle:$gradleVer"

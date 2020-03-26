@@ -6,12 +6,12 @@ plugins {
 androidApplicationConfig("com.example.android10spec")
 
 dependencies {
-    BasicDep.run {
+    BasicComponent.run {
         implementation(kotlin)
         implementation(fileTree(fileTreeMap))
     }
 
-    UiDep.run {
+    UiComponent.run {
         implementation(material)
         implementation(constraintLayout)
     }

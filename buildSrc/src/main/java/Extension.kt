@@ -45,8 +45,8 @@ fun Project.androidLibraryConfig(defaultConfigExtensions: (DefaultConfig.() -> U
 }
 
 fun DependencyHandlerScope.testDep() {
-    testImplementation(TestDep.junit)
-    AndroidTestDep.run {
+    testImplementation(TestComponent.junit)
+    AndroidTestComponent.run {
         androidTestImplementation(junitExt)
         androidTestImplementation(espressoCore)
     }
