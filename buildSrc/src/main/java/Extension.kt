@@ -17,20 +17,20 @@ fun PluginDependenciesSpec.androidDefault() {
 fun Project.androidApplicationConfig(appId: String) {
     androidLibraryConfig {
         applicationId = appId
-        versionCode = AndroidSettings.versionCode
-        versionName = AndroidSettings.versionName
+        versionCode = AndroidSettings.VERSION_CODE
+        versionName = AndroidSettings.VERSION_NAME
     }
 }
 
 fun Project.androidLibraryConfig(defaultConfigExtensions: (DefaultConfig.() -> Unit)? = null) {
     android.run {
         AndroidSettings.let {
-            compileSdkVersion(it.compileSdk)
+            compileSdkVersion(it.COMPILE_SDK)
             defaultConfig {
                 defaultConfigExtensions?.invoke(this)
-                minSdkVersion(it.minSdk)
-                targetSdkVersion(it.targetSdk)
-                testInstrumentationRunner = it.testInstrumentationRunner
+                minSdkVersion(it.MIN_SDK)
+                targetSdkVersion(it.TARGET_SDK)
+                testInstrumentationRunner = it.TEST_RUNNER
             }
         }
         buildTypes {
@@ -45,10 +45,10 @@ fun Project.androidLibraryConfig(defaultConfigExtensions: (DefaultConfig.() -> U
 }
 
 fun DependencyHandlerScope.testDep() {
-    testImplementation(TestComponent.junit)
+    testImplementation(TestComponent.JUNIT)
     AndroidTestComponent.run {
-        androidTestImplementation(junitExt)
-        androidTestImplementation(espressoCore)
+        androidTestImplementation(JUNIT_EXT)
+        androidTestImplementation(ESPRESSO_CORE)
     }
 }
 

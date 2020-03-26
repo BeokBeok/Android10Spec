@@ -8,8 +8,8 @@ buildscript {
     }
     dependencies {
         GradleComponent.run {
-            classpath(gradle)
-            classpath(kotlinGradlePlugin)
+            classpath(GRADLE)
+            classpath(KOTLIN_GRADLE_PLUGIN)
         }
     }
 }

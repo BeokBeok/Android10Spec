@@ -1,48 +1,48 @@
 object Version {
-    const val kotlin = "1.3.70"
+    const val KOTLIN = "1.3.70"
 }
 
 object AndroidSettings {
-    const val compileSdk = 29
+    const val COMPILE_SDK = 29
 
-    const val minSdk = 29
-    const val targetSdk = 29
-    const val versionCode = 1
-    const val versionName = "1.0.0"
+    const val MIN_SDK = 29
+    const val TARGET_SDK = 29
+    const val VERSION_CODE = 1
+    const val VERSION_NAME = "1.0.0"
 
-    const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    const val TEST_RUNNER = "androidx.test.runner.AndroidJUnitRunner"
 }
 
 object BasicComponent {
     val fileTreeMap = mapOf("dir" to "libs", "include" to listOf("*.jar"))
-    const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Version.kotlin}"
+    const val KOTLIN = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Version.KOTLIN}"
 }
 
 object UiComponent {
-    private const val materialVer = "1.1.0"
-    private const val constraintLayoutVer = "1.1.3"
+    private const val MATERIAL_VER = "1.1.0"
+    private const val CONSTRAINT_LAYOUT_VER = "1.1.3"
 
-    const val material = "com.google.android.material:material:$materialVer"
-    const val constraintLayout = "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
+    const val MATERIAL = "com.google.android.material:material:$MATERIAL_VER"
+    const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:$CONSTRAINT_LAYOUT_VER"
 }
 
 object TestComponent {
-    private const val junitVer = "4.12"
+    private const val JUNIT_VER = "4.12"
 
-    const val junit = "junit:junit:$junitVer"
+    const val JUNIT = "junit:junit:$JUNIT_VER"
 }
 
 object AndroidTestComponent {
-    private const val junitExtVer = "1.1.1"
-    private const val espressoVer = "3.2.0"
+    private const val JUNIT_EXT_VER = "1.1.1"
+    private const val ESPRESSO_VER = "3.2.0"
 
-    const val junitExt = "androidx.test.ext:junit:$junitExtVer"
-    const val espressoCore = "androidx.test.espresso:espresso-core:$espressoVer"
+    const val JUNIT_EXT = "androidx.test.ext:junit:$JUNIT_EXT_VER"
+    const val ESPRESSO_CORE = "androidx.test.espresso:espresso-core:$ESPRESSO_VER"
 }
 
 object GradleComponent {
-    private const val gradleVer = "3.6.1"
+    private const val GRADLE_VER = "3.6.1"
 
-    const val gradle = "com.android.tools.build:gradle:$gradleVer"
-    const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.kotlin}"
+    const val GRADLE = "com.android.tools.build:gradle:$GRADLE_VER"
+    const val KOTLIN_GRADLE_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.KOTLIN}"
 }

@@ -7,13 +7,13 @@ androidApplicationConfig("com.example.android10spec")
 
 dependencies {
     BasicComponent.run {
-        implementation(kotlin)
+        implementation(KOTLIN)
         implementation(fileTree(fileTreeMap))
     }
 
     UiComponent.run {
-        implementation(material)
-        implementation(constraintLayout)
+        implementation(MATERIAL)
+        implementation(CONSTRAINT_LAYOUT)
     }
 
     testDep()
