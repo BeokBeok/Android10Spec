@@ -7,7 +7,7 @@ buildscript {
         
     }
     dependencies {
-        GradleComponent.run {
+        dependency.GradleComponent.run {
             classpath(GRADLE)
             classpath(KOTLIN_GRADLE_PLUGIN)
         }

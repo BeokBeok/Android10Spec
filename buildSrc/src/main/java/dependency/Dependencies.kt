@@ -1,3 +1,5 @@
+package dependency
+
 object Version {
     const val KOTLIN = "1.3.70"
 }
@@ -45,4 +47,18 @@ object GradleComponent {
 
     const val GRADLE = "com.android.tools.build:gradle:$GRADLE_VER"
     const val KOTLIN_GRADLE_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.KOTLIN}"
+}
+
+object LifeCycleComponent {
+    private const val LIFECYCLE_VER = "2.2.0"
+
+    const val LIFECYCLE_VM = "androidx.lifecycle:lifecycle-viewmodel:$LIFECYCLE_VER"
+    const val LIFECYCLE_EXT = "androidx.lifecycle:lifecycle-extensions:$LIFECYCLE_VER"
+}
+
+object DaggerComponent {
+    private const val DAGGER_VER = "2.27"
+
+    const val DAGGER = "com.google.dagger:dagger:$DAGGER_VER"
+    const val DAGGER_COMPILER = "com.google.dagger:dagger-compiler:$DAGGER_VER"
 }

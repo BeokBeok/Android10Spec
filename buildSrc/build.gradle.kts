@@ -5,7 +5,6 @@ repositories {
 
 plugins {
     `kotlin-dsl`
-    `kotlin-dsl-precompiled-script-plugins`
 }
 
 // Dependencies.kt 에 접근 불가

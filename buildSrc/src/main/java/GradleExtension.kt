@@ -1,8 +1,7 @@
 import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.internal.dsl.DefaultConfig
+import dependency.AndroidSettings
 import org.gradle.api.Project
-import org.gradle.api.artifacts.dsl.DependencyHandler
-import org.gradle.kotlin.dsl.DependencyHandlerScope
 import org.gradle.plugin.use.PluginDependenciesSpec
 
 val Project.android: BaseExtension
@@ -25,12 +24,12 @@ fun Project.androidApplicationConfig(appId: String) {
 fun Project.androidLibraryConfig(defaultConfigExtensions: (DefaultConfig.() -> Unit)? = null) {
     android.run {
         AndroidSettings.let {
-            compileSdkVersion(it.COMPILE_SDK)
+            compileSdkVersion(AndroidSettings.COMPILE_SDK)
             defaultConfig {
                 defaultConfigExtensions?.invoke(this)
-                minSdkVersion(it.MIN_SDK)
-                targetSdkVersion(it.TARGET_SDK)
-                testInstrumentationRunner = it.TEST_RUNNER
+                minSdkVersion(AndroidSettings.MIN_SDK)
+                targetSdkVersion(AndroidSettings.TARGET_SDK)
+                testInstrumentationRunner = AndroidSettings.TEST_RUNNER
             }
         }
         buildTypes {
@@ -43,23 +42,3 @@ fun Project.androidLibraryConfig(defaultConfigExtensions: (DefaultConfig.() -> U
         }
     }
 }
-
-fun DependencyHandlerScope.testDep() {
-    testImplementation(TestComponent.JUNIT)
-    AndroidTestComponent.run {
-        androidTestImplementation(JUNIT_EXT)
-        androidTestImplementation(ESPRESSO_CORE)
-    }
-}
-
-private fun DependencyHandler.implementation(depName: String) =
-    add("implementation", depName)
-
-private fun DependencyHandler.kapt(depName: String) =
-    add("kapt", depName)
-
-private fun DependencyHandler.testImplementation(depName: String) =
-    add("testImplementation", depName)
-
-private fun DependencyHandler.androidTestImplementation(depName: String) =
-    add("androidTestImplementation", depName)
