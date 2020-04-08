@@ -43,7 +43,7 @@ object AndroidTestComponent {
 }
 
 object GradleComponent {
-    private const val GRADLE_VER = "3.6.1"
+    private const val GRADLE_VER = "3.6.2"
 
     const val GRADLE = "com.android.tools.build:gradle:$GRADLE_VER"
     const val KOTLIN_GRADLE_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.KOTLIN}"
