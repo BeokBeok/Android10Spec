@@ -3,7 +3,15 @@ package dependency
 import org.gradle.api.artifacts.dsl.DependencyHandler
 import org.gradle.kotlin.dsl.DependencyHandlerScope
 
-fun DependencyHandlerScope.testDep() {
+fun DependencyHandlerScope.buildSrcDefault() {
+    GradleComponent.run {
+        implementation(GRADLE)
+        implementation(KOTLIN_GRADLE_PLUGIN)
+    }
+    implementation(BasicComponent.KOTLIN)
+}
+
+fun DependencyHandlerScope.test() {
     testImplementation(TestComponent.JUNIT)
     AndroidTestComponent.run {
         androidTestImplementation(JUNIT_EXT)
@@ -11,12 +19,11 @@ fun DependencyHandlerScope.testDep() {
     }
 }
 
-fun DependencyHandlerScope.buildSrcDefault() {
-    GradleComponent.run {
-        implementation(GRADLE)
-        implementation(KOTLIN_GRADLE_PLUGIN)
+fun DependencyHandlerScope.dagger() {
+    DaggerComponent.run {
+        implementation(DAGGER)
+        kapt(DAGGER_COMPILER)
     }
-    implementation(BasicComponent.KOTLIN)
 }
 
 private fun DependencyHandler.implementation(depName: String) =

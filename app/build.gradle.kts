@@ -1,4 +1,7 @@
-import dependency.testDep
+import dependency.BasicComponent
+import dependency.UiComponent
+import dependency.dagger
+import dependency.test
 
 plugins {
     id("com.android.application")
@@ -10,15 +13,16 @@ androidApplicationConfig("com.example.android10spec")
 dependencies {
     implementation(project(":common"))
 
-    dependency.BasicComponent.run {
+    BasicComponent.run {
         implementation(KOTLIN)
         implementation(fileTree(fileTreeMap))
     }
 
-    dependency.UiComponent.run {
+    UiComponent.run {
         implementation(MATERIAL)
         implementation(CONSTRAINT_LAYOUT)
     }
 
-    testDep()
+    test()
+    dagger()
 }

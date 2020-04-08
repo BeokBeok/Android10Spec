@@ -1,5 +1,5 @@
 import dependency.UiComponent
-import dependency.testDep
+import dependency.test
 
 plugins {
     id("com.android.library")
@@ -11,5 +11,5 @@ androidLibraryConfig()
 dependencies {
     implementation(UiComponent.MATERIAL)
 
-    testDep()
+    test()
 }
