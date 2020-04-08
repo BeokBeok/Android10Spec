@@ -11,6 +11,7 @@ val Project.android: BaseExtension
 fun PluginDependenciesSpec.androidDefault() {
     id("kotlin-android")
     id("kotlin-android-extensions")
+    id("kotlin-kapt")
 }
 
 fun Project.androidApplicationConfig(appId: String) {
@@ -39,6 +40,9 @@ fun Project.androidLibraryConfig(defaultConfigExtensions: (DefaultConfig.() -> U
                 proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
                 consumerProguardFiles("consumer-rules.pro")
             }
+        }
+        dataBinding {
+            isEnabled = true
         }
     }
 }
