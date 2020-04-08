@@ -3,6 +3,7 @@
     package="com.example.android10spec">
 
     <application
+        android:name=".app.RealApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
