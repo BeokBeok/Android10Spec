@@ -1,12 +1,5 @@
 package com.example.android10spec
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import com.example.common.base.BaseActivity
 
-class MainActivity : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
-}
+class MainActivity : BaseActivity(layoutId = R.layout.activity_main)

@@ -8,6 +8,8 @@ plugins {
 androidApplicationConfig("com.example.android10spec")
 
 dependencies {
+    implementation(project(":common"))
+
     dependency.BasicComponent.run {
         implementation(KOTLIN)
         implementation(fileTree(fileTreeMap))
