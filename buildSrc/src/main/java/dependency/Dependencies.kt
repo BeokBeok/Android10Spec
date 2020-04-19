@@ -21,31 +21,21 @@ object BasicComponent {
 }
 
 object UiComponent {
-    private const val MATERIAL_VER = "1.1.0"
-    private const val CONSTRAINT_LAYOUT_VER = "1.1.3"
-
-    const val MATERIAL = "com.google.android.material:material:$MATERIAL_VER"
-    const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:$CONSTRAINT_LAYOUT_VER"
+    const val MATERIAL = "com.google.android.material:material:1.1.0"
+    const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:1.1.3"
 }
 
 object TestComponent {
-    private const val JUNIT_VER = "4.12"
-
-    const val JUNIT = "junit:junit:$JUNIT_VER"
+    const val JUNIT = "junit:junit:4.12"
 }
 
 object AndroidTestComponent {
-    private const val JUNIT_EXT_VER = "1.1.1"
-    private const val ESPRESSO_VER = "3.2.0"
-
-    const val JUNIT_EXT = "androidx.test.ext:junit:$JUNIT_EXT_VER"
-    const val ESPRESSO_CORE = "androidx.test.espresso:espresso-core:$ESPRESSO_VER"
+    const val JUNIT_EXT = "androidx.test.ext:junit:1.1.1"
+    const val ESPRESSO_CORE = "androidx.test.espresso:espresso-core:3.2.0"
 }
 
 object GradleComponent {
-    private const val GRADLE_VER = "3.6.2"
-
-    const val GRADLE = "com.android.tools.build:gradle:$GRADLE_VER"
+    const val GRADLE = "com.android.tools.build:gradle:3.6.2"
     const val KOTLIN_GRADLE_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.KOTLIN}"
 }
 
