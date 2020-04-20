@@ -22,7 +22,8 @@ abstract class BaseActivity<VDB : ViewDataBinding>(
     }
 
     private fun setupBinding() {
-        binding = DataBindingUtil.setContentView(this, layoutId)
-        binding.lifecycleOwner = this
+        binding = DataBindingUtil.setContentView<VDB>(this, layoutId).apply {
+            lifecycleOwner = this@BaseActivity
+        }
     }
 }
