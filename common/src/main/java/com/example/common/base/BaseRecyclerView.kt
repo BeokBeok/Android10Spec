@@ -28,6 +28,15 @@ abstract class BaseAdapter<ITEM : Any, VDB : ViewDataBinding>(
 
     override fun onBindViewHolder(holder: BaseViewHolder<VDB>, position: Int) =
         holder.bindViewHolder(contents[position])
+
+    fun replaceContents(item: List<ITEM>?) {
+        if (item == null) return
+
+        contents.run {
+            clear()
+            addAll(item)
+        }
+    }
 }
 
 abstract class BaseViewHolder<VDB : ViewDataBinding>(
