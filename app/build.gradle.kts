@@ -1,7 +1,4 @@
-import dependency.BasicComponent
-import dependency.UiComponent
-import dependency.daggerComponent
-import dependency.testComponent
+import dependency.*
 
 plugins {
     id("com.android.application")
@@ -28,6 +25,8 @@ dependencies {
         implementation(MATERIAL)
         implementation(CONSTRAINT_LAYOUT)
     }
+
+    implementation(LifeCycleComponent.LIFECYCLE_EXT)
 
     testComponent()
     daggerComponent()

@@ -1,3 +1,4 @@
+import dependency.LifeCycleComponent
 import dependency.UiComponent
 import dependency.daggerComponent
 import dependency.testComponent
@@ -11,6 +12,7 @@ androidLibraryConfig()
 
 dependencies {
     implementation(UiComponent.MATERIAL)
+    implementation(LifeCycleComponent.LIFECYCLE_EXT)
 
     testComponent()
     daggerComponent()

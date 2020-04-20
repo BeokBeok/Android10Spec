@@ -9,8 +9,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 
 data class ResourceBinding(
-    @LayoutRes
-    val layoutId: Int,
+    @LayoutRes val layoutId: Int,
     val bindingId: Int
 )
 
