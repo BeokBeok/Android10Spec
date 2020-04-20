@@ -12,16 +12,16 @@ fun DependencyHandlerScope.buildSrcDefault() {
 }
 
 fun DependencyHandlerScope.testComponent() {
-    testApi(TestComponent.JUNIT)
+    testImplementation(TestComponent.JUNIT)
     AndroidTestComponent.run {
-        androidTestApi(JUNIT_EXT)
-        androidTestApi(ESPRESSO_CORE)
+        androidTestImplementation(JUNIT_EXT)
+        androidTestImplementation(ESPRESSO_CORE)
     }
 }
 
 fun DependencyHandlerScope.daggerComponent() {
     DaggerComponent.run {
-        api(DAGGER)
+        implementation(DAGGER)
         kapt(DAGGER_COMPILER)
     }
 }
@@ -29,14 +29,11 @@ fun DependencyHandlerScope.daggerComponent() {
 private fun DependencyHandler.implementation(depName: String) =
     add("implementation", depName)
 
-private fun DependencyHandler.api(depName: String) =
-    add("api", depName)
-
 private fun DependencyHandler.kapt(depName: String) =
     add("kapt", depName)
 
-private fun DependencyHandler.testApi(depName: String) =
-    add("testApi", depName)
+private fun DependencyHandler.testImplementation(depName: String) =
+    add("testImplementation", depName)
 
-private fun DependencyHandler.androidTestApi(depName: String) =
-    add("androidTestApi", depName)
+private fun DependencyHandler.androidTestImplementation(depName: String) =
+    add("androidTestImplementation", depName)
