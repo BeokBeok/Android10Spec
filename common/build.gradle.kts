@@ -1,4 +1,5 @@
 import dependency.UiComponent
+import dependency.daggerComponent
 import dependency.testComponent
 
 plugins {
@@ -12,4 +13,5 @@ dependencies {
     implementation(UiComponent.MATERIAL)
 
     testComponent()
+    daggerComponent()
 }
