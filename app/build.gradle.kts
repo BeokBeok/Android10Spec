@@ -1,12 +1,12 @@
 import dependency.BasicComponent
 import dependency.UiComponent
-import dependency.dagger
-import dependency.test
+import dependency.daggerComponent
+import dependency.testComponent
 
 plugins {
     id("com.android.application")
-    androidDefault()
     id("scabbard.gradle") version "0.2.0"
+    defaultPlugins()
 }
 
 androidApplicationConfig("com.example.android10spec")
@@ -29,6 +29,6 @@ dependencies {
         implementation(CONSTRAINT_LAYOUT)
     }
 
-    test()
-    dagger()
+    testComponent()
+    daggerComponent()
 }

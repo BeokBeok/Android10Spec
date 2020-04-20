@@ -8,7 +8,7 @@ val Project.android: BaseExtension
     get() = extensions.findByName("android") as? BaseExtension
         ?: error("Project $name is not an Android module")
 
-fun PluginDependenciesSpec.androidDefault() {
+fun PluginDependenciesSpec.defaultPlugins() {
     id("kotlin-android")
     id("kotlin-android-extensions")
     id("kotlin-kapt")

@@ -11,7 +11,7 @@ fun DependencyHandlerScope.buildSrcDefault() {
     implementation(BasicComponent.KOTLIN)
 }
 
-fun DependencyHandlerScope.test() {
+fun DependencyHandlerScope.testComponent() {
     testImplementation(TestComponent.JUNIT)
     AndroidTestComponent.run {
         androidTestImplementation(JUNIT_EXT)
@@ -19,7 +19,7 @@ fun DependencyHandlerScope.test() {
     }
 }
 
-fun DependencyHandlerScope.dagger() {
+fun DependencyHandlerScope.daggerComponent() {
     DaggerComponent.run {
         implementation(DAGGER)
         kapt(DAGGER_COMPILER)
