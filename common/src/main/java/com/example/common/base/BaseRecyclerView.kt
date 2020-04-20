@@ -43,7 +43,7 @@ abstract class BaseViewHolder<VDB : ViewDataBinding>(
     private val resourceBinding: ResourceBinding,
     private val viewModels: ArrayMap<Int, BaseViewModel>? = null
 ) : RecyclerView.ViewHolder(
-    LayoutInflater.from(parent.context).inflate(resourceBinding.layoutId, parent)
+    LayoutInflater.from(parent.context).inflate(resourceBinding.layoutId, parent, false)
 ) {
     private val binding: VDB? = DataBindingUtil.bind(itemView)
 

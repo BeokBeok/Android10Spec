@@ -1,5 +1,6 @@
 package com.example.android10spec
 
+import android.os.Bundle
 import android.util.ArrayMap
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
@@ -25,6 +26,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     lateinit var viewModelFactory: ViewModelProvider.Factory
     private val mainViewModel: MainViewModel by lazy {
         ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setupRecyclerView()
     }
 
     override fun setupInject() =
