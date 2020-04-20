@@ -40,10 +40,7 @@ object GradleComponent {
 }
 
 object LifeCycleComponent {
-    private const val LIFECYCLE_VER = "2.2.0"
-
-    const val LIFECYCLE_VM = "androidx.lifecycle:lifecycle-viewmodel:$LIFECYCLE_VER"
-    const val LIFECYCLE_EXT = "androidx.lifecycle:lifecycle-extensions:$LIFECYCLE_VER"
+    const val LIFECYCLE_EXT = "androidx.lifecycle:lifecycle-extensions:2.2.0"
 }
 
 object DaggerComponent {
