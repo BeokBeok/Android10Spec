@@ -10,7 +10,7 @@ plugins {
 androidLibraryConfig()
 
 dependencies {
-    implementation(UiComponent.MATERIAL)
+    api(UiComponent.MATERIAL)
 
     testComponent()
     daggerComponent()

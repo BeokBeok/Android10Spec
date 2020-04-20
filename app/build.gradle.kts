@@ -1,7 +1,5 @@
 import dependency.BasicComponent
 import dependency.UiComponent
-import dependency.daggerComponent
-import dependency.testComponent
 
 plugins {
     id("com.android.application")
@@ -24,11 +22,5 @@ dependencies {
         implementation(fileTree(fileTreeMap))
     }
 
-    UiComponent.run {
-        implementation(MATERIAL)
-        implementation(CONSTRAINT_LAYOUT)
-    }
-
-    testComponent()
-    daggerComponent()
+    implementation(UiComponent.CONSTRAINT_LAYOUT)
 }
