@@ -6,6 +6,11 @@ plugins {
 }
 
 androidLibraryConfig()
+android {
+    scabbard {
+        enabled = true
+    }
+}
 
 dependencies {
     BasicComponent.run {

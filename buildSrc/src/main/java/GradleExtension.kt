@@ -2,6 +2,7 @@ import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.internal.dsl.DefaultConfig
 import dependency.AndroidSettings
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.version
 import org.gradle.plugin.use.PluginDependenciesSpec
 
 val Project.android: BaseExtension
@@ -12,6 +13,7 @@ fun PluginDependenciesSpec.defaultPlugins() {
     id("kotlin-android")
     id("kotlin-android-extensions")
     id("kotlin-kapt")
+    id("scabbard.gradle") version "0.2.0"
 }
 
 fun Project.androidApplicationConfig(appId: String) {

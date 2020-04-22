@@ -7,6 +7,11 @@ plugins {
 }
 
 androidLibraryConfig()
+android {
+    scabbard {
+        enabled = true
+    }
+}
 
 dependencies {
     implementation(project(":common"))
