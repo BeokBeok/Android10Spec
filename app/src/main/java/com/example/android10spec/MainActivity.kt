@@ -17,13 +17,6 @@ import javax.inject.Inject
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
-    override val binding: ActivityMainBinding
-        get() = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
-            .apply {
-                lifecycleOwner = this@MainActivity
-                vm = mainViewModel
-            }
-
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
     private val mainViewModel: MainViewModel by lazy {
@@ -38,6 +31,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun setupInject() =
         (application as AppComponentProvider).getAppComponent().inject(this)
+
+    override fun setupBinding() {
+        binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+            .apply {
+                lifecycleOwner = this@MainActivity
+                vm = mainViewModel
+            }
+    }
 
     private fun setupRecyclerView() {
         binding.rvContents.adapter = object : BaseAdapter<String, RvItemMainBinding>(

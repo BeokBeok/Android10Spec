@@ -6,12 +6,14 @@ import androidx.databinding.ViewDataBinding
 
 abstract class BaseActivity<VDB : ViewDataBinding> : AppCompatActivity() {
 
-    protected abstract val binding: VDB
+    protected lateinit var binding: VDB
 
     protected abstract fun setupInject()
+    protected abstract fun setupBinding()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setupInject()
         super.onCreate(savedInstanceState)
+        setupBinding()
     }
 }
