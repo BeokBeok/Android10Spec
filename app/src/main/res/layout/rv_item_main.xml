@@ -8,6 +8,10 @@
         <variable
             name="specItem"
             type="String" />
+
+        <variable
+            name="vm"
+            type="com.example.android10spec.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,6 +29,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:onClick="@{() -> vm.onClick(specItem)}"
             tools:text="Foldables" />
 
         <View

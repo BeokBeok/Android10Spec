@@ -3,6 +3,7 @@ package com.example.android10spec
 import android.os.Bundle
 import android.util.ArrayMap
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.android10spec.databinding.ActivityMainBinding
 import com.example.android10spec.databinding.RvItemMainBinding
@@ -11,6 +12,7 @@ import com.example.common.base.BaseActivity
 import com.example.common.base.BaseAdapter
 import com.example.common.base.BaseViewModel
 import com.example.common.base.ResourceBinding
+import com.example.foldables.ui.FoldablesActivity
 import javax.inject.Inject
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
@@ -31,6 +33,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setupRecyclerView()
+        setupObserver()
     }
 
     override fun setupInject() =
@@ -43,5 +46,15 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 put(BR.vm, mainViewModel)
             }
         ) {}
+    }
+
+    private fun setupObserver() {
+        mainViewModel.selectedItem.observe(this, Observer {
+            it.getContentIfNotHandled()?.let { spec ->
+                when (spec) {
+                    "Foldables" -> startActivity(FoldablesActivity.getIntent(this))
+                }
+            }
+        })
     }
 }
