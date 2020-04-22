@@ -29,6 +29,9 @@ fun DependencyHandlerScope.daggerComponent() {
 private fun DependencyHandler.implementation(depName: String) =
     add("implementation", depName)
 
+private fun DependencyHandler.api(depName: String) =
+    add("api", depName)
+
 private fun DependencyHandler.kapt(depName: String) =
     add("kapt", depName)
 

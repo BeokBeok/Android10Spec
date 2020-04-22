@@ -1,4 +1,5 @@
-import dependency.*
+import dependency.daggerComponent
+import dependency.testComponent
 
 plugins {
     id("com.android.application")
@@ -15,18 +16,6 @@ android {
 
 dependencies {
     implementation(project(":common"))
-
-    BasicComponent.run {
-        implementation(KOTLIN)
-        implementation(fileTree(fileTreeMap))
-    }
-
-    UiComponent.run {
-        implementation(MATERIAL)
-        implementation(CONSTRAINT_LAYOUT)
-    }
-
-    implementation(LifeCycleComponent.LIFECYCLE_EXT)
 
     testComponent()
     daggerComponent()

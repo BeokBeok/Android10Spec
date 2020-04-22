@@ -1,7 +1,4 @@
-import dependency.LifeCycleComponent
-import dependency.UiComponent
-import dependency.daggerComponent
-import dependency.testComponent
+import dependency.*
 
 plugins {
     id("com.android.library")
@@ -11,8 +8,17 @@ plugins {
 androidLibraryConfig()
 
 dependencies {
-    implementation(UiComponent.MATERIAL)
-    implementation(LifeCycleComponent.LIFECYCLE_EXT)
+    BasicComponent.run {
+        api(KOTLIN)
+        api(fileTree(fileTreeMap))
+    }
+
+    UiComponent.run {
+        api(MATERIAL)
+        api(CONSTRAINT_LAYOUT)
+    }
+
+    api(LifeCycleComponent.LIFECYCLE_EXT)
 
     testComponent()
     daggerComponent()
