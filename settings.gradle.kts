@@ -3,4 +3,8 @@ include(":common")
 include(":foldables")
 include(":5gnetworks")
 include(":smartReplyInNotifications")
+include(":darkTheme")
+include(":sharingShortcuts")
+include(":settingsPanels")
+include(":gestureNavigation")
 rootProject.name = "Android10Spec"
