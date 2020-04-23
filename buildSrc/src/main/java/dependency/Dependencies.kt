@@ -49,3 +49,10 @@ object DaggerComponent {
     const val DAGGER = "com.google.dagger:dagger:$DAGGER_VER"
     const val DAGGER_COMPILER = "com.google.dagger:dagger-compiler:$DAGGER_VER"
 }
+
+object GlideComponent {
+    private const val GLIDE_VER = "4.11.0"
+
+    const val GLIDE = "com.github.bumptech.glide:glide:$GLIDE_VER"
+    const val GLIDE_COMPILER = "com.github.bumptech.glide:compiler:$GLIDE_VER"
+}

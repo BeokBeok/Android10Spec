@@ -27,4 +27,5 @@ dependencies {
 
     testComponent()
     daggerComponent()
+    glideComponent()
 }

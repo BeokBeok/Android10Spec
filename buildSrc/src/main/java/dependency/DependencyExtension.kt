@@ -26,6 +26,13 @@ fun DependencyHandlerScope.daggerComponent() {
     }
 }
 
+fun DependencyHandlerScope.glideComponent() {
+    GlideComponent.run {
+        implementation(GLIDE)
+        kapt(GLIDE_COMPILER)
+    }
+}
+
 private fun DependencyHandler.implementation(depName: String) =
     add("implementation", depName)
 
