@@ -2,7 +2,6 @@ package com.example.android10spec
 
 import android.os.Bundle
 import android.util.ArrayMap
-import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.android10spec.databinding.ActivityMainBinding
@@ -15,7 +14,7 @@ import com.example.common.base.ResourceBinding
 import com.example.foldables.ui.FoldablesActivity
 import javax.inject.Inject
 
-class MainActivity : BaseActivity<ActivityMainBinding>() {
+class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -32,12 +31,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun setupInject() =
         (application as AppComponentProvider).getAppComponent().inject(this)
 
-    override fun setupBinding() {
-        binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
-            .apply {
-                lifecycleOwner = this@MainActivity
-                vm = mainViewModel
-            }
+    override fun setupViewModel() {
+        binding.vm = mainViewModel
     }
 
     private fun setupRecyclerView() {
