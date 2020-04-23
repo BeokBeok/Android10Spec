@@ -13,13 +13,17 @@ import com.example.darktheme.di.DarkThemeComponentProvider
 import com.example.foldables.di.DaggerFoldablesComponent
 import com.example.foldables.di.FoldablesComponent
 import com.example.foldables.di.FoldablesComponentProvider
+import com.example.gesturenavigation.di.DaggerGestureNavigationComponent
+import com.example.gesturenavigation.di.GestureNavigationComponent
+import com.example.gesturenavigation.di.GestureNavigationComponentProvider
 import com.example.smartreplyinnotifications.di.DaggerSmartReplyInNotificationComponent
 import com.example.smartreplyinnotifications.di.SmartReplyInNotificationComponent
 import com.example.smartreplyinnotifications.di.SmartReplyInNotificationComponentProvider
 
 class RealApplication : Application(),
     AppComponentProvider, FoldablesComponentProvider, FiveGNetworksComponentProvider,
-    SmartReplyInNotificationComponentProvider, DarkThemeComponentProvider {
+    SmartReplyInNotificationComponentProvider, DarkThemeComponentProvider,
+    GestureNavigationComponentProvider {
 
     override fun getAppComponent(): AppComponent =
         DaggerAppComponent.builder().build()
@@ -35,4 +39,7 @@ class RealApplication : Application(),
 
     override fun getDarkThemeComponent(): DarkThemeComponent =
         DaggerDarkThemeComponent.builder().build()
+
+    override fun getGestureNavigationComponent(): GestureNavigationComponent =
+        DaggerGestureNavigationComponent.builder().build()
 }

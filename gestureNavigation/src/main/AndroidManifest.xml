@@ -1,1 +1,9 @@
-<manifest package="com.example.gesturenavigation" />
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gesturenavigation">
+
+    <application>
+        <activity android:name=".ui.GestureNavigationActivity" />
+    </application>
+
+</manifest>
