@@ -34,6 +34,7 @@
                 app:layout_constraintTop_toBottomOf="@id/iv_foldable" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_contents"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"

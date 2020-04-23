@@ -1,4 +1,15 @@
 <resources>
-    <string name="caption_foldables">With Android 10 you can optimize your apps for foldables and other large-screen devices.</string>
-    <string name="contents_foldables">Building on robust multi-window support, Android 10 extends multitasking across app windows and provides screen continuity to maintain your app state as the device folds or unfolds. Android 10 adds a number of improvements in onResume and onPause to support multi-resume and notify your app when it has focus. It also changes how the resizeableActivity manifest attribute works, to help you manage how your app is displayed on foldable and large screens. To help you build for foldable devices, you can configure a foldable emulator as a virtual device (AVD) in Android Studio. For details on how to optimize your apps for foldables, see the developer guide.</string>
+    <string name="caption_foldables">With Android 10 you can optimize your apps
+        for foldables and other large-screen devices.</string>
+    <string name="contents_foldables">Building on robust multi-window support,
+        Android 10 extends multitasking across app windows and provides screen continuity
+        to maintain your app state as the device folds or unfolds.
+        Android 10 adds a number of improvements in
+        <a href="https://developer.android.com/reference/android/app/Activity.html#onResume()">onResume</a>
+        and <a href="https://developer.android.com/reference/android/app/Activity.html#onPause()">onPause</a>
+        to support multi-resume and notify your app when it has focus.
+        It also changes how the <a href="https://developer.android.com/guide/topics/ui/multi-window#resizeableActivity">resizeableActivity</a>
+        manifest attribute works, to help you manage how your app is displayed on foldable and large screens.
+        To help you build for foldable devices, you can configure a foldable emulator as a virtual device (AVD) in Android Studio.
+        For details on how to optimize your apps for foldables, see the <a href="https://developer.android.com/guide/topics/ui/foldables">developer guide.</a></string>
 </resources>
