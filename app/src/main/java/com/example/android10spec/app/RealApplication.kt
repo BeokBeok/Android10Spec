@@ -16,6 +16,9 @@ import com.example.foldables.di.FoldablesComponentProvider
 import com.example.gesturenavigation.di.DaggerGestureNavigationComponent
 import com.example.gesturenavigation.di.GestureNavigationComponent
 import com.example.gesturenavigation.di.GestureNavigationComponentProvider
+import com.example.settingspanels.di.DaggerSettingsPanelsComponent
+import com.example.settingspanels.di.SettingsPanelsComponent
+import com.example.settingspanels.di.SettingsPanelsComponentProvider
 import com.example.smartreplyinnotifications.di.DaggerSmartReplyInNotificationComponent
 import com.example.smartreplyinnotifications.di.SmartReplyInNotificationComponent
 import com.example.smartreplyinnotifications.di.SmartReplyInNotificationComponentProvider
@@ -23,7 +26,7 @@ import com.example.smartreplyinnotifications.di.SmartReplyInNotificationComponen
 class RealApplication : Application(),
     AppComponentProvider, FoldablesComponentProvider, FiveGNetworksComponentProvider,
     SmartReplyInNotificationComponentProvider, DarkThemeComponentProvider,
-    GestureNavigationComponentProvider {
+    GestureNavigationComponentProvider, SettingsPanelsComponentProvider {
 
     override fun getAppComponent(): AppComponent =
         DaggerAppComponent.builder().build()
@@ -42,4 +45,7 @@ class RealApplication : Application(),
 
     override fun getGestureNavigationComponent(): GestureNavigationComponent =
         DaggerGestureNavigationComponent.builder().build()
+
+    override fun getSettingsPanelsComponent(): SettingsPanelsComponent =
+        DaggerSettingsPanelsComponent.builder().build()
 }

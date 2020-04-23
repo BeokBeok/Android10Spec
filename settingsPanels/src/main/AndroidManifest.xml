@@ -1,1 +1,9 @@
-<manifest package="com.example.settingspanels" />
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.settingspanels">
+
+    <application>
+        <activity android:name=".ui.SettingsPanelsActivity" />
+    </application>
+
+</manifest>
