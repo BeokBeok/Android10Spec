@@ -16,6 +16,7 @@ android {
 dependencies {
     implementation(project(":common"))
     implementation(project(":foldables"))
+    implementation(project(":5gnetworks"))
 
     testComponent()
     daggerComponent()

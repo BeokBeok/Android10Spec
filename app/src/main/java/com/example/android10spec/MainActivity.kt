@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.ArrayMap
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.a5gnetworks.ui.FiveGNetworksActivity
 import com.example.android10spec.databinding.ActivityMainBinding
 import com.example.android10spec.databinding.RvItemMainBinding
 import com.example.android10spec.di.AppComponentProvider
@@ -49,6 +50,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
             it.getContentIfNotHandled()?.let { spec ->
                 when (spec) {
                     "Foldables" -> startActivity(FoldablesActivity.getIntent(this))
+                    "5G Networks" -> startActivity(FiveGNetworksActivity.getIntent(this))
                 }
             }
         })
