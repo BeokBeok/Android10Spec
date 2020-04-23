@@ -13,6 +13,7 @@ import com.example.common.base.BaseAdapter
 import com.example.common.base.BaseViewModel
 import com.example.common.base.ResourceBinding
 import com.example.foldables.ui.FoldablesActivity
+import com.example.smartreplyinnotifications.ui.SmartReplyInNotificationsActivity
 import javax.inject.Inject
 
 class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
@@ -51,6 +52,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
                 when (spec) {
                     "Foldables" -> startActivity(FoldablesActivity.getIntent(this))
                     "5G Networks" -> startActivity(FiveGNetworksActivity.getIntent(this))
+                    "Smart Reply in notifications" -> startActivity(
+                        SmartReplyInNotificationsActivity.getIntent(this)
+                    )
                 }
             }
         })

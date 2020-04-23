@@ -17,6 +17,7 @@ dependencies {
     implementation(project(":common"))
     implementation(project(":foldables"))
     implementation(project(":5gnetworks"))
+    implementation(project(":smartReplyInNotifications"))
 
     testComponent()
     daggerComponent()
