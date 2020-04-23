@@ -1,3 +1,9 @@
 <resources>
-    <string name="contents_dark_theme">Android 10 adds a system-wide dark theme that’s ideal for low light and helps save battery. Users can activate a new system-wide dark theme by going to Settings or turning on Battery Saver. This changes the system UI to dark, and enables the dark theme of apps that support it. You can build a custom dark theme for your app or opt-in to a new Force Dark feature that lets the system dynamically create a dark version from your existing theme. You may also want to take advantage of AppCompat’s DayNight feature to offer a dark theme for users on earlier versions of Android. See the developer guide for more information.</string>
+    <string name="contents_dark_theme">Android 10 adds a system-wide dark theme that’s ideal for low light and helps save battery.
+        Users can activate a new system-wide dark theme by going to Settings or turning on Battery Saver.
+        This changes the system UI to dark, and enables the dark theme of apps that support it.
+        You can build a custom dark theme for your app or opt-in to a new Force Dark feature that lets the system dynamically create a dark version from your existing theme.
+        You may also want to take advantage of <a href="https://developer.android.com/guide/topics/ui/look-and-feel/darktheme">AppCompat’s DayNight feature</a> to offer a dark theme for users on earlier versions of Android.
+        See the <a href="https://developer.android.com/guide/topics/ui/look-and-feel/darktheme">developer guide</a> for more information.</string>
+    <string name="caption_dark_theme">Android 10 can create a dark theme for your app dynamically with Force Dark.</string>
 </resources>

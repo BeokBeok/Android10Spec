@@ -1,3 +1,7 @@
 <resources>
-    <string name="contents_settings_panels">You can now show key system settings directly in the context of your app, through a new Settings Panel API. A settings panel is a floating UI that you invoke to show settings that users might need, such as internet connectivity, NFC, and audio volume. For example, a browser could display a panel with connectivity settings like Airplane Mode, Wi-Fi (including nearby networks), and Mobile Data. To display a settings panel, just fire an intent with one of the new Settings.Panel actions.</string>
+    <string name="contents_settings_panels">You can now show key system settings directly in the context of your app,
+        through a new <a href="https://developer.android.com/reference/android/provider/Settings.Panel">Settings Panel API.</a>
+        A settings panel is a floating UI that you invoke to show settings that users might need, such as internet connectivity, NFC, and audio volume.
+        For example, a browser could display a panel with connectivity settings like Airplane Mode, Wi-Fi (including nearby networks), and Mobile Data.
+        To display a settings panel, just fire an intent with one of the new <a href="https://developer.android.com/reference/android/provider/Settings.Panel.html#ACTION_INTERNET_CONNECTIVITY">Settings.Panel actions.</a></string>
 </resources>

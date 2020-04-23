@@ -9,6 +9,7 @@
         tools:context=".ui.FiveGNetworksActivity">
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_contents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"

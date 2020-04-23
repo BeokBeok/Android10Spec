@@ -1,4 +1,7 @@
 <resources>
 
-    <string name="contents_5g_networks">5G promises to deliver consistently faster speeds and lower latency, Android 10 adds platform support for 5G and extends existing APIs to help you take advantage of these enhancements. You can use connectivity APIs to detect if the device has a high bandwidth connection and check whether the connection is metered. With these, your apps and games can tailor rich, immersive experiences to users over 5G.</string>
+    <string name="contents_5g_networks">5G promises to deliver consistently faster speeds and lower latency,
+        Android 10 adds platform support for 5G and extends <a href="https://developer.android.com/reference/android/net/ConnectivityManager">existing APIs</a> to help you take advantage of these enhancements.
+        You can use connectivity APIs to detect if the device has a high bandwidth connection and check whether the connection is metered. With these,
+        your apps and games can tailor rich, immersive experiences to users over 5G.</string>
 </resources>

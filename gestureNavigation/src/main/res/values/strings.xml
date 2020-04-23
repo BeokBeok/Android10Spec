@@ -1,4 +1,10 @@
 <resources>
-    <string name="contents_gesture_navigation">Android 10 introduces a fully gestural navigation mode that eliminates the navigation bar area and allows apps to use the full screen to deliver richer, more immersive experiences. It retains the familiar Back, Home, and Recents navigation through edge swipes rather than visible buttons. To blend seamlessly with gesture navigation, your should go edge-to-edge, drawing behind the navigation bar to create an immersive experience. To implement this, apps should use the setSystemUiVisibility() API to be laid out fullscreen, and then handle WindowInsets as appropriate to ensure that important pieces of UI are not obscured. Get started optimizing your app today, and see our blog post series for more information.</string>
+    <string name="contents_gesture_navigation">Android 10 introduces a fully gestural navigation mode that eliminates the navigation bar area and allows apps to use the full screen to deliver richer, more immersive experiences.
+        It retains the familiar Back, Home, and Recents navigation through edge swipes rather than visible buttons.
+        To blend seamlessly with gesture navigation, your should go edge-to-edge, drawing behind the navigation bar to create an immersive experience.
+        To implement this, apps should use the <a href="https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int)">setSystemUiVisibility()</a> API to be laid out fullscreen,
+        and then handle <a href="https://developer.android.com/reference/android/view/WindowInsets">WindowInsets</a> as appropriate to ensure that important pieces of UI are not obscured.
+        <a href="https://developer.android.com/training/gestures/gesturenav">Get started optimizing your app</a> today,
+        and see our <a href="https://medium.com/androiddevelopers/gesture-navigation-going-edge-to-edge-812f62e4e83e">blog post series</a> for more information.</string>
     <string name="caption_gesture_navigation">Gesture navigation gives apps the full screen for content.</string>
 </resources>
