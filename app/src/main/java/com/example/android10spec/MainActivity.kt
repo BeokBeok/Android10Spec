@@ -12,6 +12,7 @@ import com.example.common.base.BaseActivity
 import com.example.common.base.BaseAdapter
 import com.example.common.base.BaseViewModel
 import com.example.common.base.ResourceBinding
+import com.example.darktheme.ui.DarkThemeActivity
 import com.example.foldables.ui.FoldablesActivity
 import com.example.smartreplyinnotifications.ui.SmartReplyInNotificationsActivity
 import javax.inject.Inject
@@ -55,6 +56,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
                     "Smart Reply in notifications" -> startActivity(
                         SmartReplyInNotificationsActivity.getIntent(this)
                     )
+                    "Dark Theme" -> startActivity(DarkThemeActivity.getIntent(this))
+                    "Gesture Navigation" -> Unit
+                    "Settings Panels" -> Unit
+                    "Sharing shortcuts" -> Unit
                 }
             }
         })

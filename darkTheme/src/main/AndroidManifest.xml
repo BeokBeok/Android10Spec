@@ -1,1 +1,9 @@
-<manifest package="com.example.darktheme" />
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.darktheme">
+
+    <application>
+        <activity android:name=".ui.DarkThemeActivity" />
+    </application>
+
+</manifest>

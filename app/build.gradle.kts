@@ -18,6 +18,10 @@ dependencies {
     implementation(project(":foldables"))
     implementation(project(":5gnetworks"))
     implementation(project(":smartReplyInNotifications"))
+    implementation(project(":darkTheme"))
+    implementation(project(":gestureNavigation"))
+    implementation(project(":settingsPanels"))
+    implementation(project(":sharingShortcuts"))
 
     testComponent()
     daggerComponent()
