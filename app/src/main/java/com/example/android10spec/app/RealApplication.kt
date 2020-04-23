@@ -19,6 +19,9 @@ import com.example.gesturenavigation.di.GestureNavigationComponentProvider
 import com.example.settingspanels.di.DaggerSettingsPanelsComponent
 import com.example.settingspanels.di.SettingsPanelsComponent
 import com.example.settingspanels.di.SettingsPanelsComponentProvider
+import com.example.sharingshortcuts.di.DaggerSharingShortcutsComponent
+import com.example.sharingshortcuts.di.SharingShortcutsComponent
+import com.example.sharingshortcuts.di.SharingShortcutsComponentProvider
 import com.example.smartreplyinnotifications.di.DaggerSmartReplyInNotificationComponent
 import com.example.smartreplyinnotifications.di.SmartReplyInNotificationComponent
 import com.example.smartreplyinnotifications.di.SmartReplyInNotificationComponentProvider
@@ -26,7 +29,8 @@ import com.example.smartreplyinnotifications.di.SmartReplyInNotificationComponen
 class RealApplication : Application(),
     AppComponentProvider, FoldablesComponentProvider, FiveGNetworksComponentProvider,
     SmartReplyInNotificationComponentProvider, DarkThemeComponentProvider,
-    GestureNavigationComponentProvider, SettingsPanelsComponentProvider {
+    GestureNavigationComponentProvider, SettingsPanelsComponentProvider,
+    SharingShortcutsComponentProvider {
 
     override fun getAppComponent(): AppComponent =
         DaggerAppComponent.builder().build()
@@ -48,4 +52,7 @@ class RealApplication : Application(),
 
     override fun getSettingsPanelsComponent(): SettingsPanelsComponent =
         DaggerSettingsPanelsComponent.builder().build()
+
+    override fun getSharingShortcutsComponent(): SharingShortcutsComponent =
+        DaggerSharingShortcutsComponent.builder().build()
 }

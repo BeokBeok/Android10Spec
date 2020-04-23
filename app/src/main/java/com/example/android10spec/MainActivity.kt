@@ -16,6 +16,7 @@ import com.example.darktheme.ui.DarkThemeActivity
 import com.example.foldables.ui.FoldablesActivity
 import com.example.gesturenavigation.ui.GestureNavigationActivity
 import com.example.settingspanels.ui.SettingsPanelsActivity
+import com.example.sharingshortcuts.ui.SharingShortcutsActivity
 import com.example.smartreplyinnotifications.ui.SmartReplyInNotificationsActivity
 import javax.inject.Inject
 
@@ -61,7 +62,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
                     "Dark Theme" -> startActivity(DarkThemeActivity.getIntent(this))
                     "Gesture Navigation" -> startActivity(GestureNavigationActivity.getIntent(this))
                     "Settings Panels" -> startActivity(SettingsPanelsActivity.getIntent(this))
-                    "Sharing shortcuts" -> Unit
+                    "Sharing shortcuts" -> startActivity(SharingShortcutsActivity.getIntent(this))
                 }
             }
         })

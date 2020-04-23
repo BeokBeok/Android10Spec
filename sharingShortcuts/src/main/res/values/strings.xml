@@ -1,0 +1,3 @@
+<resources>
+    <string name="contents_sharing_shortcuts">Sharing Shortcuts makes sharing quicker and easier, letting users jump directly to another app to share content. Developers can publish share targets that launch a specific activity in their apps with content attached, and these are shown to users in the share UI. Because they\'re published in advance, the share UI loads instantly when launched. Sharing Shortcuts is similar to App Shortcuts and uses the same ShortcutInfo API. The API is also supported in the ShareTarget AndroidX library. See the sample app for details.</string>
+</resources>
