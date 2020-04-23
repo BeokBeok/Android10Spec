@@ -1,3 +1,5 @@
 <resources>
 
+    <string name="contents_smart_reply_in_notifications">Android 10 uses on-device ML to suggest contextual actions in notifications, such as smart replies for messages or opening a map for an address in the notification. Your apps can take advantage of this feature right away, without you needing to do anything. System-provided smart replies and actions are inserted directly into notifications by default. You can still supply your own replies and actions if you want. Just opt out of Smart Reply on a per-notification basis using setAllowGeneratedReplies() and setAllowSystemGeneratedContextualActions().</string>
+    <string name="caption_smart_reply_in_notifications">Smart Reply can suggest actions based on notification content.</string>
 </resources>
